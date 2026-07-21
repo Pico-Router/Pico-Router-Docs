@@ -1,0 +1,21 @@
+{
+    "name": "Pico Router Dev",
+    "image": "pico-router-dev:latest",
+    "runArgs": [
+        "--platform=linux/amd64"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode.cmake-tools"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "C_Cpp.formatting": "clangFormat"
+            }
+        }
+    }
+}
