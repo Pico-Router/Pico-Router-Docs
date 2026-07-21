@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   llms: {
     domain: 'https://pico-router-docs.vercel.app/',
     title: 'Pico Router Docs',
-    description: 'A template for building documentation with Nuxt UI and Nuxt Content.',
+    description: '',
     full: {
       title: 'Pico Router Docs - Full Documentation',
       description: 'This is the full documentation for the Pico Router Docs.'
@@ -85,10 +85,11 @@ export default defineNuxtConfig({
   },
 
   mcp: {
-    name: 'Docs template'
+    name: 'Pico Router Docs'
   },
 
   ogImage: {
     zeroRuntime: true
   }
 })
+
