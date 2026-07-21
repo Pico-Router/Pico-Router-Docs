@@ -1,16 +1,28 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
+const repository = {
+  url: 'https://github.com/Pico-Router/Pico-Router',
+  branch: 'main'
+}
+
 export default defineContentConfig({
   collections: {
     landing: defineCollection({
       type: 'page',
-      source: 'index.md'
+      source: {
+        repository,
+        include: 'docs/**',
+        exclude: ['docs/[0-9]*'],
+        prefix: '/'
+      }
     }),
     docs: defineCollection({
       type: 'page',
       source: {
-        include: '**',
-        exclude: ['index.md']
+        repository,
+        include: 'docs/**',
+        exclude: ['docs/index.md'],
+        prefix: '/'
       },
       schema: z.object({
         links: z.array(z.object({
@@ -23,3 +35,4 @@ export default defineContentConfig({
     })
   }
 })
+
