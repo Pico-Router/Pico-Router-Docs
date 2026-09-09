@@ -8,7 +8,7 @@ definePageMeta({ layout: 'empty' })
 </script>
 
 <template>
-  <div
+  <UMain
     class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden
            bg-[#111] max-md:bg-[linear-gradient(90deg,var(--ui-primary)_0%,color-mix(in_srgb,var(--ui-primary)_15%,black)_100%)]"
   >
@@ -32,22 +32,27 @@ definePageMeta({ layout: 'empty' })
       "
     />
 
-    <UContainer class="z-100 text-center max-w-3xl flex flex-col gap-2">
-      <h2 class="text-2xl">
-        Thank you for your interest in Pico Router
+    <UContainer class="z-100 text-center max-w-3xl flex flex-col items-center gap-3">
+      <img
+        src="/favicon.svg"
+        alt="Pico Router Icon"
+        class="h-auto w-32"
+      >
+      <h2 class="text-xl mt-4">
+        Thank you for your interest in Pico Router!
       </h2>
-      <h1 class="text-4xl font-bold">
-        The documentation page is currently under construction
+      <h1 class="text-4xl font-bold mb-6 capitalize">
+        The docs are currently under construction :(
       </h1>
-      <p class="text-xl">
-        Checkout the project on GitHub in the meantime
-      </p>
       <UButton
-        icon="i-lucide-github"
-        size="md"
+        trailing-icon="akar-icons:github-fill"
+        size="xl"
         color="neutral"
-        variant="subtle"
-      />
+        variant="solid"
+        to="https://github.com/Pico-Router/Pico-Router"
+      >
+        Pico Router on GitHub
+      </UButton>
     </UContainer>
-  </div>
+  </UMain>
 </template>
