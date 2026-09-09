@@ -9,7 +9,7 @@ definePageMeta({ layout: 'empty' })
 
 <template>
   <UMain
-    class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden
+    class="relative flex min-h-screen min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden
            bg-[#111] max-md:bg-[linear-gradient(90deg,var(--ui-primary)_0%,color-mix(in_srgb,var(--ui-primary)_15%,black)_100%)]"
   >
     <div
@@ -38,11 +38,11 @@ definePageMeta({ layout: 'empty' })
         alt="Pico Router Icon"
         class="h-auto w-32"
       >
-      <h2 class="text-xl mt-4">
+      <h2 class="text-xl mt-4 px-8">
         Thank you for your interest in Pico Router!
       </h2>
       <h1 class="text-4xl font-bold mb-6 capitalize">
-        The docs are currently under construction :(
+        The docs are currently under construction
       </h1>
       <UButton
         trailing-icon="akar-icons:github-fill"
