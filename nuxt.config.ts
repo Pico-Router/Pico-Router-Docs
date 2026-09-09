@@ -29,6 +29,14 @@ export default defineNuxtConfig({
     }
   },
 
+  routeRules: {
+    ...(process.env.NODE_ENV === 'production'
+      ? {}
+      : {
+          '/': { redirect: '/coming-soon' }
+        })
+  },
+
   experimental: {
     asyncContext: true
   },
@@ -92,4 +100,3 @@ export default defineNuxtConfig({
     zeroRuntime: true
   }
 })
-

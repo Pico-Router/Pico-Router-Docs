@@ -34,20 +34,6 @@ useSeoMeta({
 const headline = computed(() => findPageHeadline(navigation?.value, page.value?.path))
 
 defineOgImage('Docs', { title, description, headline: headline.value })
-
-const links = computed(() => {
-  const links = []
-  if (toc?.bottom?.edit) {
-    links.push({
-      icon: 'i-lucide-external-link',
-      label: 'Edit this page',
-      to: `${toc.bottom.edit}/${page?.value?.stem}.${page?.value?.extension}`,
-      target: '_blank'
-    })
-  }
-
-  return [...links, ...(toc?.bottom?.links || [])].filter(Boolean)
-})
 </script>
 
 <template>
@@ -94,8 +80,7 @@ const links = computed(() => {
           <div
             class="hidden lg:block space-y-6"
             :class="{ 'mt-6!': page.body?.toc?.links?.length }"
-          >
-          </div>
+          />
         </template>
       </UContentToc>
     </template>
