@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    ...(process.env.NODE_ENV === 'production'
+    ...(process.env.NODE_ENV === 'development'
       ? {}
       : {
           '/': { redirect: '/coming-soon' }
